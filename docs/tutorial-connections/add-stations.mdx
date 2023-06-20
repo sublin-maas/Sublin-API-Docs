@@ -1,0 +1,74 @@
+---
+sidebar_position: 3
+---
+
+# Add Stations
+
+Before connections can be added all stations (train and bus stations) for a region needs be be added.
+
+## POST /connections/stations
+Swagger documentation: 
+**[https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST](https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST)**
+
+### Station Types
+
+Depending of the connection type different information needs to be provided.
+
+Following connection types are supported:
+  - [TRAIN](#TRAIN) 
+  - [BUS](#BUS) 
+
+
+#### <a name="TRAIN" />Train Station
+
+```jsx title="Train station Bad Gastein'"
+{
+  "partnerId": "partner_id",
+  "assetClass": "TRAIN"
+  "stopCode": "",
+  "country": "at",
+  "stopUrl": "",
+  "stopLon": 13.132041,
+  "stopId": "8100095",
+  "stopLat": 47.111306,
+  "zoneId": "",
+  "stopDesc": "",
+  "stopName": "Bad Gastein Bahnhof",
+  "departureOnly": false, // Is true if it is a city train station for departure only
+}
+```
+
+#### <a name="BUS" />Bus station
+
+```jsx title="STATIONSHUTTLE example to hotel 'Sonngastein'"
+{
+  "connectionId": "RJ1131",
+  "destinationId": "id_of_hotel_Sonngastein",
+  "stationId": "local_train_station",
+  "routes": [
+    {
+      "departureTime": 449,
+      "numberLegs": 2,
+      "stationId": "id_of_wien_hbf",
+      "stationName": "Wien Hbf",
+      "trainName":  "RJ111"
+    }
+  ],
+  hours: {
+      "days": ["MON", "TUE", "WED", "THU", "FRI"],
+      "endTime": 728, //Departure time (in minutes) from the local train station
+      "startTime": 715 //Arrival time at the destination
+  },
+  calender: {
+      "startMonth": 1,
+      "endMonth": 12,
+      "startDay": 1,
+      "endDay": 12
+  },
+}
+```
+
+
+asdf
+
+
