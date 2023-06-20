@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Add and Manage Connections',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/add_connections.svg').default,
     description: (
       <>
         Sublin allows to add and update sustainable connections between POIs and stations and POIs such as shuttle services,
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Add and Manage Services for Connections',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/add_services.svg').default,
     description: (
       <>
         Sublin allows to add and manage services for connections such as tickets, special arrangements, discounts, and complementary offerings. Coming soon.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Enhance your Services',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/enhance_services.svg').default,
     description: (
       <>
         Enhance your services. Add filters to your search,
