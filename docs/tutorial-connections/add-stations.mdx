@@ -4,16 +4,13 @@ sidebar_position: 3
 
 # Add Stations
 
-Before connections can be added all stations (train and bus stations) for a region needs be be added.
+Before connections can be added, it is necessary to include all the stations (both train and bus stations) for a given region.
 
 ## POST /connections/stations
 Swagger documentation: 
 **[https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST](https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST)**
 
-### Station Types
-
-Depending of the connection type different information needs to be provided.
-
+### Connection Types
 Following connection types are supported:
   - [TRAIN](#TRAIN) 
   - [BUS](#BUS) 
@@ -25,6 +22,8 @@ Following connection types are supported:
 {
   "partnerId": "partner_id",
   "assetClass": "TRAIN"
+  "departureOnly": false, // Is true if it is a city train station for departure only
+  "stopName": "Bad Gastein Bahnhof",
   "stopCode": "",
   "country": "at",
   "stopUrl": "",
@@ -33,42 +32,31 @@ Following connection types are supported:
   "stopLat": 47.111306,
   "zoneId": "",
   "stopDesc": "",
-  "stopName": "Bad Gastein Bahnhof",
-  "departureOnly": false, // Is true if it is a city train station for departure only
 }
 ```
 
 #### <a name="BUS" />Bus station
 
-```jsx title="STATIONSHUTTLE example to hotel 'Sonngastein'"
+```jsx title="A bus station in Bad Gastein"
 {
-  "connectionId": "RJ1131",
-  "destinationId": "id_of_hotel_Sonngastein",
-  "stationId": "local_train_station",
-  "routes": [
-    {
-      "departureTime": 449,
-      "numberLegs": 2,
-      "stationId": "id_of_wien_hbf",
-      "stationName": "Wien Hbf",
-      "trainName":  "RJ111"
-    }
-  ],
-  hours: {
-      "days": ["MON", "TUE", "WED", "THU", "FRI"],
-      "endTime": 728, //Departure time (in minutes) from the local train station
-      "startTime": 715 //Arrival time at the destination
-  },
-  calender: {
-      "startMonth": 1,
-      "endMonth": 12,
-      "startDay": 1,
-      "endDay": 12
-  },
+  "partnerId": "partner_id",
+  "assetClass": "BUS"
+  "departureOnly": false, // Is true if it is a city train station for departure only
+  "stopName": "Bad Gastein Kötschachdorf",
+  "stopCode": "",
+  "country": "at",
+  "stopUrl": "",
+  "stopLon": 13.15151742377142,
+  "stopId": "XXX",
+  "stopLat": 47.13952037809829,
+  "zoneId": "",
+  "stopDesc": "",
 }
 ```
 
+## GET /connections/stations
+Swagger documentation: **[https://api.sublin.cloud/docs/#/connections/connectionsStationsGET](https://api.sublin.cloud/docs/#/connections/connectionsStationsGET)**
 
-asdf
-
-
+```jsx title="Query example for all stations of a region"
+?country=at&partnerId=Lt2VECvJPtYim3txD6VE
+```
