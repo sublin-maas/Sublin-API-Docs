@@ -18,7 +18,7 @@ Following connection types are supported:
   - [STATIONBUS](#STATIONBUS) (from local train station to POI via bus)
   - [STATIONFOOT](#STATIONFOOT)  (from local train station to POI via foot)
   - [BUS](#BUS) (from POI to POI via bus)
-  - TRAIN (from city to local train station)
+  - [TRAIN](#TRAIN) (from city to local train station)
 
 #### <a name="STATIONBUS" />STATIONBUS
 
@@ -123,4 +123,37 @@ Following connection types are supported:
 }
 ```
 
+#### <a name="TRAIN" />TRAIN
+This type is limited to the "locality" destination type, as it serves exclusively as the starting point for other local connections.
 
+```jsx title="TRAIN example to localitx 'Bad Gastein'"
+{
+  "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
+  "description": "description", // Typically, the name of the line
+  "providerId": "provider_id" // Id of provider of connection
+  "partnerId": "partner_id" // Id of the regional partner
+  "destinationId": "id_of_bad_gastein", // Id of locality
+  "stationId": "local_train_station", 
+  "routes": [
+    {
+      "departureTime": 449,
+      "numberLegs": 2,
+      "stationId": "id_of_wien_hbf",
+      "stationName": "Wien Hbf",
+      "trainName":  "RJ111"
+    }
+  ],
+  hours: {
+      "days": ["MON", "TUE", "WED", "THU", "FRI"],
+      "endTime": 728, //Departure time (in minutes) from the local train station
+      "startTime": 715 //Arrival time at the destination
+  },
+  calender: {
+      "startMonth": 1,
+      "endMonth": 12,
+      "startDay": 1,
+      "endDay": 12
+  },
+  "deepLink": "link" // A deep link is provided, enabling access to the route through a specific app.
+}
+```
