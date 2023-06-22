@@ -2,13 +2,13 @@
 sidebar_position: 3
 ---
 
-# Add Stations
+# Manage Stations
 
 Before connections can be added, it is necessary to include all the stations (both train and bus stations) for a given region.
 
 ## POST /connections/stations
 Swagger documentation: 
-**[https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST](https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST)**
+**[https://api.sublin.cloud/docs/#/connections/connectionsStationsPOST](https://api.sublin.cloud/docs/#/connections/connectionsStationsPOST)**
 
 ### Connection Types
 Following connection types are supported:
@@ -20,7 +20,8 @@ Following connection types are supported:
 
 ```jsx title="Train station Bad Gastein'"
 {
-  "partnerId": "partner_id",
+  "partnerId": "partner_id", // Id of region
+  "providerId": "provider_id", // Id of provider of data
   "assetClass": "TRAIN"
   "departureOnly": false, // Is true if it is a city train station for departure only
   "stopName": "Bad Gastein Bahnhof",
@@ -39,7 +40,8 @@ Following connection types are supported:
 
 ```jsx title="A bus station in Bad Gastein"
 {
-  "partnerId": "partner_id",
+  "partnerId": "partner_id", // Id of region
+  "providerId": "provider_id", // Id of provider of data
   "assetClass": "BUS"
   "departureOnly": false, // Is true if it is a city train station for departure only
   "stopName": "Bad Gastein Kötschachdorf",

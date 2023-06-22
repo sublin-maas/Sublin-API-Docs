@@ -4,9 +4,9 @@ sidebar_position: 2
 
 # Get all POIs
 Before connections can be established all POIs (active and passive) need to be retrieved for a region.
-Swagger documentation: 
 
 ## GET /destinations
+Swagger documentation: 
 **[https://api.sublin.cloud/docs/#/destinations/destinationsGET](https://api.sublin.cloud/docs/#/destinations/destinationsGET)**
 
 ```jsx title="Query example for all destinations of a region"
