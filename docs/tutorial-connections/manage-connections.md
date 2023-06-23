@@ -10,8 +10,17 @@ Connections can be added on a destination basis.
 Swagger documentation: 
 **[https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST](https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST)**. The maximum limit for connections per POST call is set at 500.
 
-### Connection Types
+### Connection Schema
+Not all destination types are connected to the train stations and to each other.
 
+|  | Departure train station | Regional train station |  lodging | point_of_interest |
+| ----------- | ----------- | ----------- |  ----------- | ----------- |
+| locality | [x] |
+| lodging (active only) | [x] | [x] | | [x] |
+| point_of_interest (active) | [x] | [x] |  | [x] |
+| point_of_interest (passive) | |
+
+### Connection Types
 Depending of the connection type different information needs to be provided.
 
 Following connection types are supported:
