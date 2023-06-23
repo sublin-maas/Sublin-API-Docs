@@ -4,17 +4,12 @@ sidebar_position: 1
 
 # Concept
 
-POIs (Points of Interest) are organized within regions, which are managed by regional partners. Each region comprises a specific set of POIs. There are two primary types of POIs: those with active connections and those without.
-
-POIs with active connections are associated with generated connections, meaning transportation options or links will be provided for these POIs. On the other hand, POIs without active connections solely rely on passive connections, which are generated from the active connections of other POIs.
-
-In other words, active connections are directly generated for certain POIs, while other POIs benefit from indirect connections established through the active connections of neighboring POIs.
-
-#### Example
-A hotel with active connections provides convenient transportation options, including a bus and shuttle service, that link to the train station. Additionally, this hotel offers various bus and walking routes to nearby attractions such as a spa center, ski lift, and restaurant. On the other hand, while a nearby restaurant does not have its own active connections, it benefits from a passive connection provided by the hotel.
+POIs (Points of Interest) are organized within regions, which are managed by regional partners. Each region comprises a specific set of POIs. 
 
 ### Condensed Information
-Sublin is a marketing platform that focuses on promoting sustainably accessible destinations. It is not designed to be a comprehensive journey planner. Instead, Sublin highlights the most relevant connections between cities and travel destinations that align with the nature of the promoted destination.
+Sublin, a marketing platform, prioritizes the promotion of sustainable and accessible destinations. It does not aim to be an all-encompassing journey planner. Instead, Sublin focuses on showcasing the most pertinent connections between cities and travel destinations that align with the specific characteristics of the promoted destination.
 
-For instance, when a user wants to travel to a hotel, Sublin will only display connections with arrival times that fall within the hotel's check-in period. This ensures that users are presented with connections that are suitable and convenient for their intended stay.
+For example, if a user intends to travel to a hotel, Sublin will exclusively present connections that align with the hotel's check-in period. This ensures that users are provided with relevant and convenient connection options tailored to their specific stay requirements.
 
+### Connection with MaaS (Mobility-as-a-Service) Providers
+Sublin promotes suitable connections for travel destinations as a marketing platform. While we do not offer routing, navigation, and ticketing services directly, our platform facilitates deep linking with relevant providers to offer comprehensive connection options. This allows users to seamlessly access routing, navigation, and ticketing services provided by our partners through our platform.

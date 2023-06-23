@@ -1,19 +1,20 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-# Manage Stations
+# Region Setup
 
-Before connections can be added, it is necessary to include all the stations (both train and bus stations) for a given region.
+In order for a region to be managed by a regional partner, two prerequisite steps must be completed. Firstly, the stations within the region need to be added. This includes one or more train stations that are interconnected with cities, as well as a variety of regional bus stations. Secondly, the connections between the train stations and the cities need to be established. 
 
-## POST /connections/stations
-Swagger documentation: 
-**[https://api.sublin.cloud/docs/#/connections/connectionsStationsPOST](https://api.sublin.cloud/docs/#/connections/connectionsStationsPOST)**
+## 1. Adding Stations
 
-### Connection Types
 Following connection types are supported:
   - [TRAIN](#TRAIN) 
   - [BUS](#BUS) 
+
+### POST /connections/stations
+Swagger documentation: 
+**[https://api.sublin.cloud/docs/#/connections/connectionsStationsPOST](https://api.sublin.cloud/docs/#/connections/connectionsStationsPOST)** The number of items allowed in a POST call is limited to 500.
 
 
 #### <a name="TRAIN" />Train Station
@@ -56,9 +57,14 @@ Following connection types are supported:
 }
 ```
 
-## GET /connections/stations
+### GET /connections/stations
 Swagger documentation: **[https://api.sublin.cloud/docs/#/connections/connectionsStationsGET](https://api.sublin.cloud/docs/#/connections/connectionsStationsGET)**
 
 ```jsx title="Query example for all stations of a region"
 ?country=at&partnerId=Lt2VECvJPtYim3txD6VE
 ```
+
+## 2. Connect the region to cities
+Before initiating the onboarding process for Points of Interest (POIs) within a region, it is essential to establish connections between the train stations in the region and the cities located outside of the region. These connections serve as the starting point for further connections within the region, such as shuttle services from the POIs.
+
+For information on connection management, including establishing and managing these train connections, please consult the "[Manage Connections](/docs/tutorial-connections/manage-connections)" section. 
