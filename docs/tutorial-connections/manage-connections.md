@@ -2,13 +2,13 @@
 sidebar_position: 4
 ---
 
-# Add Connections
+# Manage Connections
 
 Connections can be added on a destination basis. 
 
 ## POST /destinations/{id}/connections
 Swagger documentation: 
-**[https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST](https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST)**
+**[https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST](https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST)**. The maximum limit for connections per POST call is set at 500.
 
 ### Connection Types
 
@@ -42,12 +42,12 @@ Following connection types are supported:
       "trainName":  "RJ111"
     }
   ],
-  hours: {
+  "hours": {
       "days": ["MON", "TUE", "WED", "THU", "FRI"],
       "endTime": 728, //Departure time (in minutes) from the local train station
       "startTime": 715 //Arrival time at the destination
   },
-  calender: {
+  "calender": {
       "startMonth": 1,
       "endMonth": 12,
       "startDay": 1,
@@ -78,12 +78,12 @@ Following connection types are supported:
       "trainName":  "RJ111"
     }
   ],
-  hours: {
+  "hours": {
       "days": ["MON", "TUE", "WED", "THU", "FRI"],
       "endTime": 728, //Departure time (in minutes) from the local train station
       "startTime": 715 //Arrival time at the destination
   },
-  calender: {
+  "calender": {
       "startMonth": 1,
       "endMonth": 12,
       "startDay": 1,
@@ -108,12 +108,12 @@ Following connection types are supported:
   "departureId": "id_of_hotel_Sonngastein",
   "departureName": "Sonngastein",
   "departureStationId": "id_of_bus_station",
-  hours: {
+  "hours": {
       "days": ["MON", "TUE", "WED", "THU", "FRI"],
       "endTime": 728, //Departure time (in minutes) from the local train station
       "startTime": 715 //Arrival time at the destination
   },
-  calender: {
+  "calender": {
       "startMonth": 1,
       "endMonth": 12,
       "startDay": 1,
@@ -143,12 +143,12 @@ This type is limited to the "locality" destination type, as it serves exclusivel
       "trainName":  "RJ111"
     }
   ],
-  hours: {
+  "hours": {
       "days": ["MON", "TUE", "WED", "THU", "FRI"],
       "endTime": 728, //Departure time (in minutes) from the local train station
       "startTime": 715 //Arrival time at the destination
   },
-  calender: {
+  "calender": {
       "startMonth": 1,
       "endMonth": 12,
       "startDay": 1,
