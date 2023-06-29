@@ -16,6 +16,6 @@ Sustainable connection between train stations and POIs and between POIs is at th
 mobility operators, travel agencies, Mobility-as-a-Service (MaaS) providers and providers of routing services to provide 
 connection data to the platform.
 
-[Add and manage connections](/docs/category/manage-connections)
+[Add and manage connections](/docs/category/add-and-manage-connections)
 
 
