@@ -21,16 +21,16 @@ Swagger documentation:
 
 ```jsx title="Train station Bad Gastein'"
 {
+  "stopId": "8100095",
   "partnerId": "partner_id", // Id of region
   "providerId": "provider_id", // Id of provider of data
-  "assetClass": "TRAIN"
+  "assetClass": "TRAIN",
   "departureOnly": false, // Is true if it is a city train station for departure only
   "stopName": "Bad Gastein Bahnhof",
   "stopCode": "",
   "country": "at",
   "stopUrl": "",
   "stopLon": 13.132041,
-  "stopId": "8100095",
   "stopLat": 47.111306,
   "zoneId": "",
   "stopDesc": "",

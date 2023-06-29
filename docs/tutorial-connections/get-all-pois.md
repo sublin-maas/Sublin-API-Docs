@@ -20,7 +20,7 @@ Swagger documentation:
 ```
 
 ```jsx title="Query example for all destinations of a region, limited to the ones with active connections"
-?country=at&partnerId=Lt2VECvJPtYim3txD6VE&activeConnections
+?country=at&partnerId=Lt2VECvJPtYim3txD6VE&activeConnections=true
 ```
 
 

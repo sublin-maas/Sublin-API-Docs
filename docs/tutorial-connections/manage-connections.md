@@ -35,12 +35,12 @@ Following connection types are supported:
 {
   "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
   "description": "description", // Typically, the name of the line
-  "providerId": "provider_id" // Id of provider of connection
-  "partnerId": "partner_id" // Id of the regional partner
+  "providerId": "provider_id", // Id of provider of connection
+  "partnerId": "partner_id", // Id of the regional partner
   "destinationId": "id_of_hotel_Sonngastein",
-  "arrivalId": "id_of_hotel_Sonngastein"
-  "arrivalName": "Sonngastein"
-  "arrivalStationId": "id_of_bus_station"
+  "arrivalId": "id_of_hotel_Sonngastein",
+  "arrivalName": "Sonngastein",
+  "arrivalStationId": "id_of_bus_station",
   "stationId": "local_train_station",
   "routes": [
     {
@@ -72,11 +72,11 @@ Following connection types are supported:
 {
   "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
   "description": "description", // Typically, the name of the line
-  "providerId": "provider_id" // Id of provider of connection
-  "partnerId": "partner_id" // Id of the regional partner
+  "providerId": "provider_id", // Id of provider of connection
+  "partnerId": "partner_id", // Id of the regional partner
   "destinationId": "id_of_hotel_Sonngastein",
-  "arrivalId": "id_of_hotel_Sonngastein"
-  "arrivalName": "Sonngastein"
+  "arrivalId": "id_of_hotel_Sonngastein",
+  "arrivalName": "Sonngastein",
   "stationId": "local_train_station",
   "routes": [
     {
@@ -166,3 +166,7 @@ This type is limited to the "locality" destination type, as it serves exclusivel
   "deepLink": "link" // A deep link is provided, enabling access to the route through a specific app.
 }
 ```
+
+## GET /connections/destinations/{id}
+Swagger documentation: 
+**[https://api.sublin.cloud/docs/#/connections/connectionsDestinationsIdGET](https://api.sublin.cloud/docs/#/connections/connectionsDestinationsIdGET)**.
