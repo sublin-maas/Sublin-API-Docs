@@ -10,6 +10,7 @@ Connections can be added on a destination basis.
 Swagger documentation: 
 **[https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST](https://api.sublin.cloud/docs/#/destinations/destinationsIdServicesPOST)**. The maximum limit for connections per POST call is set at 500.
 
+
 ### Connection Schema
 Not all destination types are connected to the train stations and to each other.
 
@@ -29,11 +30,14 @@ Following connection types are supported:
   - [BUS](#BUS) (from POI to POI via bus)
   - [TRAIN](#TRAIN) (from city to local train station)
 
+> **Note: When making a POST call, any existing connections of the same connection type will be removed before new connections are added.**
+
 #### <a name="STATIONBUS" />STATIONBUS
 
 ```jsx title="STATIONBUS example to hotel 'Sonngastein'"
 {
   "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
+  "assetClass": "STATIONBUS", // Connection type - will be renamed in the coming versions
   "description": "description", // Typically, the name of the line
   "providerId": "provider_id", // Id of provider of connection
   "partnerId": "partner_id", // Id of the regional partner
@@ -71,6 +75,7 @@ Following connection types are supported:
 ```jsx title="STATIONFOOT example to hotel 'Sonngastein'"
 {
   "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
+  "assetClass": "STATIONFOOT",
   "description": "description", // Typically, the name of the line
   "providerId": "provider_id", // Id of provider of connection
   "partnerId": "partner_id", // Id of the regional partner
@@ -107,6 +112,7 @@ Following connection types are supported:
 ```jsx title="BUS example from hotel 'Sonngastein' to 'Felsentherme '"
 {
   "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
+  "assetClass": "BUS",
   "description": "description", // Typically, the name of the line
   "providerId": "provider_id", // Id of provider of connection
   "partnerId": "partner_id", // Id of the regional partner
@@ -138,6 +144,7 @@ This type is limited to the "locality" destination type, as it serves exclusivel
 ```jsx title="TRAIN example to localitx 'Bad Gastein'"
 {
   "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
+  "assetClass": "TRAIN",
   "description": "description", // Typically, the name of the line
   "providerId": "provider_id" // Id of provider of connection
   "partnerId": "partner_id" // Id of the regional partner

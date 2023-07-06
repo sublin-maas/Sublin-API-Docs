@@ -43,7 +43,7 @@ Swagger documentation:
 {
   "partnerId": "partner_id", // Id of region
   "providerId": "provider_id", // Id of provider of data
-  "assetClass": "BUS"
+  "assetClass": "BUS",
   "departureOnly": false, // Is true if it is a city train station for departure only
   "stopName": "Bad Gastein Kötschachdorf",
   "stopCode": "",
