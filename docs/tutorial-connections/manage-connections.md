@@ -141,7 +141,7 @@ Following connection types are supported:
 #### <a name="TRAIN" />TRAIN
 This type is limited to the "locality" destination type, as it serves exclusively as the starting point for other local connections.
 
-```jsx title="TRAIN example to localitx 'Bad Gastein'"
+```jsx title="TRAIN example from departure stations to local train station 'Bad Gastein'"
 {
   "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
   "assetClass": "TRAIN",
@@ -149,13 +149,62 @@ This type is limited to the "locality" destination type, as it serves exclusivel
   "providerId": "provider_id" // Id of provider of connection
   "partnerId": "partner_id" // Id of the regional partner
   "destinationId": "id_of_bad_gastein", // Id of locality
-  "stationId": "local_train_station", 
-  "routes": [
+  "arrivalStationId": "id_of_arrivalStation", 
+  "arrivalStationName": "name_of_arrivalStation", 
+  "routes": [ // All stations on the way that are included as starting stations and use the same initial leg
     {
       "departureTime": 449,
       "numberLegs": 2,
       "stationId": "id_of_wien_hbf",
       "stationName": "Wien Hbf",
+      "trainName":  "RJ111"
+    },
+    {
+      "departureTime": 455,
+      "numberLegs": 2,
+      "stationId": "id_of_wien_meidling",
+      "stationName": "Wien Meidling",
+      "trainName":  "RJ111"
+    }
+  ],
+  "hours": {
+      "days": ["MON", "TUE", "WED", "THU", "FRI"],
+      "endTime": 728, //Departure time (in minutes) from the local train station
+      "startTime": 715 //Arrival time at the destination
+  },
+  "calender": {
+      "startMonth": 1,
+      "endMonth": 12,
+      "startDay": 1,
+      "endDay": 12
+  },
+  "deepLink": "link" // A deep link is provided, enabling access to the route through a specific app.
+}
+```
+
+```jsx title="TRAIN example from local train station 'Bad Gastein' to departure stations"
+{
+  "connectionId": "id_of_connection", // Typically, the identification (ID) of the primary mode of transportation is used
+  "assetClass": "TRAIN",
+  "description": "description", // Typically, the name of the line
+  "providerId": "provider_id" // Id of provider of connection
+  "partnerId": "partner_id" // Id of the regional partner
+  "destinationId": "id_of_bad_gastein", // Id of locality
+  "departureStationId": "id_of_arrivalStation", 
+  "departureStationName": "name_of_arrivalStation", 
+  "routes": [ // All stations on the way that are included as starting stations and use the same initial leg
+    {
+      "arrivalTime": 728,
+      "numberLegs": 2,
+      "stationId": "id_of_wien_hbf",
+      "stationName": "Wien Hbf",
+      "trainName":  "RJ111"
+    },
+    {
+      "arrivalTime": 723,
+      "numberLegs": 2,
+      "stationId": "id_of_wien_meidling",
+      "stationName": "Wien Meidling",
       "trainName":  "RJ111"
     }
   ],
